@@ -1,0 +1,73 @@
+$body-color: #2c2c2c;
+$purple: #a927f5;
+$pink: #ff0062;
+$disabled-color: gray;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: $body-color;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 100px auto;
+  & > div {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1.8rem;
+  }
+}
+
+.stats {
+  & > div {
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    span {
+      background: $pink;
+      border-radius: 30%;
+      padding: 3px 9px;
+      color: white;
+      margin-left: 10px;
+    }
+  }
+  .healthbar {
+    background: $purple;
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.actions {
+  button {
+    background: $pink;
+    width: 95%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 10px auto;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background: $purple;
+    }
+    &:disabled {
+      background: $disabled-color;
+    }
+  }
+}
